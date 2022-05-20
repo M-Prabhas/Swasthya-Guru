@@ -1,0 +1,53 @@
+<%- include("header"); -%>
+<link rel="stylesheet" href="/styles.css">
+<title>swasthya guru</title>
+</head>
+
+<body>
+<h1 class="sign">SwasthyaGuru</h1>
+<span class="signbar"></span>
+
+
+
+<form  action="/signup" method="post">
+  <div class="t">
+    <label for="Email-ID">EMAIL-ID :</label>
+    <input type="text" name="EmailID" required >
+  </div>
+  <br>
+  <div class="t">
+    <label for="username">Username :</label>
+    <input type="text" name="username" required >
+  </div>
+  <br>
+  <div class="t">
+    <label for="password">Password :</label>
+    <input type="password" name="password" required >
+  </div>
+  <br>
+  <div class="t">
+    <label for="confirm">Confirm Password :</label>
+    <input type="password" name="confirm" required>
+  </div>
+  <br>
+  <div class="t">
+    <label for="DOB">Date of Birth :</label>
+     <input type="text" name="DOB" placeholder="dd/mm/yy" required>
+  </div>
+  <br>
+   <!-- <div class="t">
+    <label for="Gender">Gender :</label>
+   <input class="b" type="radio" name="Gender" value="male"><h2 style="display:inline;color:#8B9A46" >Male</h2>
+   <input class="c" type="radio" name="Gender" value="female" ><h2 style="display:inline;color:#8B9A46">Female</h2>
+  </div>
+  <br> -->
+  <button type="submit" >sign up</button>
+
+
+</form>
+
+
+
+<script src="C:\Users\DELL\Desktop\health app\signup.js" charset="utf-8"></script>
+
+<%- include("header"); -%>
