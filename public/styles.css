@@ -1,0 +1,153 @@
+*{
+  padding:0;
+  margin:0;
+
+}
+h1{
+   font-family:'Tangerine', cursive;
+   color:#FFD369;
+   font-size: 5.7rem;
+   position: absolute;
+   top:6rem;
+   left:6rem;
+
+}
+body{
+  background-image: repeating-linear-gradient(to right,#2A0944 ,#1E5128 );
+  background-repeat: no-repeat;
+  width: 100vw;
+  height:100vh;
+  z-index:-400;
+}
+label{
+  color:white;
+  font-size:1.8rem;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right:17rem;
+  top:15rem;
+}
+form button{
+  width: 14rem;
+  height:3rem;
+  font-size:1.7rem;
+  font-family: 'Tapestry', cursive;
+  border-style: solid;
+  border-width: medium;
+  border-color:#4D4C7D;
+  border-radius:18px;
+    color:#A85CF9;
+}
+.w a{
+  width: 7rem;
+  height:3rem;
+  font-size:1.7rem;
+  font-family: 'Tapestry', cursive;
+  background-color: white;
+  text-align: center;
+  border-radius: 10px;
+  border-color:#4D4C7D;
+  border-width: thick;
+  border-style: solid;
+  text-decoration: none;
+  color:#A85CF9;
+}
+.w .home{
+  height:3rem;
+  width: 7rem;
+  font-size:1.7rem;
+  font-family: 'Tapestry', cursive;
+  background-color: white;
+  text-align: center;
+  border-radius: 10px;
+  border-color: #4D4C7D;
+  border-width: thick;
+  border-style: solid;
+  text-decoration: none;
+  color:#A85CF9;
+}
+input{
+  height:2.7rem;
+  width:14rem;
+  font-size:1.8rem;
+  font-family: 'Teko', sans-serif;
+  font-stretch: expanded;
+  border-style: solid;
+  border-width: thick;
+  border-color:#4D4C7D;
+  border-radius:10px;
+  outline: none;
+  text-align: center;
+}
+input::placeholder{
+  font-size: 1.8rem;
+  font-family: 'Teko', sans-serif;
+  font-stretch: expanded;
+}
+.b{
+  height:1.7rem;
+  width:3rem;
+}
+.c{
+  height:1.7rem;
+  width:3rem;
+}
+.w{
+  position: absolute;
+  top:20rem;
+  right:15rem;
+}
+span{
+  display:block;
+  height:0.2px;
+  width:378px;
+  position:absolute;
+  top:10.9rem;
+  left:6rem;
+  border-color:#417D7A;
+  border-style:solid;
+  z-index:-1;
+}
+span.signbar{
+  display:block;
+  height:0.2px;
+  width:378px;
+  position:absolute;
+  top:10.9rem;
+  left:6rem;
+  border-color:#417D7A;
+  border-style:solid;
+  z-index:-1;
+}
+
+@media screen and (max-width: 809px) {
+     .w{
+       right:8rem;
+     }
+     form{
+       top:18rem;
+       right:4rem;
+     }
+  }
+@media screen and (max-width: 637px) {
+  .sign{
+    left:5rem;
+  }
+  .signbar{
+    left:1rem;
+  }
+    form{
+      right:1rem;
+    }
+}
+@media screen and (max-width: 542px) {
+     h1{
+       left:3rem;
+     }
+     span{
+       left:3rem;
+     }
+}
