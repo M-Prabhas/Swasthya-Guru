@@ -1,0 +1,118 @@
+*{
+  margin:0px;
+  padding:0px;
+}
+h1{
+   font-family:'Tangerine', cursive;
+   color:#C74B50;
+   font-size: 5.7rem;
+   position: absolute;
+   top:7.3rem;
+   left:4rem;
+   z-index:1;
+}
+body{
+  background-image:linear-gradient(to right,yellow,orange);
+  background-repeat: no-repeat;
+  width: 100vw;
+  height:100vh;
+  z-index:0;
+}
+.about{
+  z-index:1;
+  color:#FD5D5D;
+  font-family: 'IM Fell English SC', serif;
+  font-size: 1.4rem;
+  font-stretch: expanded;
+  font-display: swap;
+  text-align: left;
+  position: absolute;
+  top:17rem;
+  left:4rem;
+  right:45rem;
+}
+.markad{
+  display:block;
+  height:0.2px;
+  width:378px;
+  position:absolute;
+  top:12rem;
+  left:4rem;
+  border-color:#417D7A;
+  border-style:solid;
+  z-index:-1;
+}
+.header{
+  width:100vw;
+  height:5rem;
+  background-color: black;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:2;
+  overflow-x: hidden;
+}
+.menubar{
+  position:absolute;
+  left:0;
+  top:-100rem;
+  height:85%;
+  width:100vw;
+  background-color: black;
+  align-items: center;
+  z-index:3;
+}
+.navbar{
+  position: absolute;
+  top:13rem;
+  left:47rem;
+
+}
+li{
+  list-style: none;
+  line-height:3rem;
+}
+li a{
+  text-decoration: none;
+  color:white;
+  font-size: 2rem;
+    transition:color 2s;
+}
+.active{
+  background-color: white;
+  color:green;
+  padding:5px;
+  border-radius: 10px;
+  outline: none;
+}
+li a:hover{
+  color:cyan;
+}
+.menubutton{
+    position:fixed;
+    right:3rem;
+    top:1.5rem;
+    cursor:pointer;
+}
+.bar{
+  display:block;
+  height:0.2px;
+  width:1.8rem;
+  border-color:white;
+  border-style:solid;
+  margin-bottom: 3px;
+}
+
+
+.clicked .bar:nth-child(2){
+     opacity: 0;
+}
+.clicked .bar:nth-child(1){
+     transform: translateY(22px) rotate(-45deg);
+}
+.clicked .bar:nth-child(3){
+     transform: translateY(11px) rotate(45deg);
+}
+.display{
+  top:5rem;
+}
