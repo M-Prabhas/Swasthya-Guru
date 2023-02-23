@@ -1,0 +1,72 @@
+<%- include("header"); -%>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=El+Messiri&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Creepster&family=Satisfy&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Stint+Ultra+Condensed&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Updock&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/asanas.css">
+<title>swasthya guru</title>
+</head>
+<body>
+
+  <div class="header">
+       <div class="menubutton">
+         <span class="bar"></span>
+         <span class="bar"></span>
+         <span class="bar"></span>
+      </div>
+  </div>
+      <div class="menubar">
+        <ul class="navbar">
+          <li><a href="/home">Home</a></li>
+              <li><a href="/asanas" class="active">Asanas</a></li>
+              <li><a href="/precautions" >Precautiouns</a></li>
+                <li><a href="/profile"  >Profile</a></li>
+              <form  action="/deleteaccount" method="post">
+                <li><button type="submit">Delete Account</button></li>
+              </form>
+
+        </ul>
+        </div>
+
+        <span class="head">Asanas</span>
+        <hr>
+
+        <div class="search">
+         <div class="searchBar">
+           <input type="text" placeholder="Search Asanas here..."/>
+           <button type="submit"><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+         </div>
+         <div class="matchedUsers">
+             <a></a>
+         </div>
+        </div>
+
+<div class="container">
+  <% for(var i=0;i<asanas.length;i++){ %>
+    <a class="list" href="/asanas/<%=asanas[i].name%>"><%= asanas[i].name %></a>
+  <%}%>
+</div>
+
+
+<script src="/js/asanas.js" charset="utf-8"></script>
+
+<%- include("footer"); -%>

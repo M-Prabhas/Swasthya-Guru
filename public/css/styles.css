@@ -40,6 +40,7 @@ form button{
   border-color:#4D4C7D;
   border-radius:18px;
     color:#A85CF9;
+    cursor: pointer;
 }
 .w a{
   width: 7rem;
@@ -54,6 +55,7 @@ form button{
   border-style: solid;
   text-decoration: none;
   color:#A85CF9;
+  cursor: pointer;
 }
 .w .home{
   height:3rem;
@@ -127,6 +129,13 @@ span.signbar{
   position: absolute;
   right:26rem;
   top:12.4rem;
+  color:#A85CF9;
+  font-size: 2rem;
+}
+.message{
+  position: absolute;
+  right:15rem;
+  top:17rem;
   color:#A85CF9;
   font-size: 2rem;
 }

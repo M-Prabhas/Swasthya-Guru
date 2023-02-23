@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>followers</title>
+  </head>
+  <body>
+  <%   if(object.length===0){%>
+    <h1>No followers</h1>
+    <% }else{ %>
+    <% for(var i=0;i<object.length;i++){ %>
+    <h1>   <%= object[i] %> </h1>
+  <%  } }%>
+</body>
+</html>

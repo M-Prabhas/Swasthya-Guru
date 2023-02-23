@@ -1,0 +1,224 @@
+*{
+  margin:0px;
+  padding:0px;
+}
+.header{
+  width:100vw;
+  height:5rem;
+  background-color: black;
+  position: fixed;
+  top:0;
+  left:0;
+  z-index:2;
+  overflow-x: hidden;
+}
+.menubar{
+  position:absolute;
+  left:0;
+  top:-100rem;
+  height:95%;
+  width:100vw;
+  background-color: black;
+  z-index:3;
+   overflow: hidden;
+}
+.navbar{
+  padding-top: 14rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+li{
+  list-style: none;
+  line-height:3rem;
+}
+li a{
+  text-decoration: none;
+  color:white;
+  font-size: 2rem;
+  transition:color 2s;
+}
+li button{
+  text-decoration: none;
+  color:white;
+  font-size: 2rem;
+  transition:color 2s;
+  border-style:black;
+  border-width: 0;
+  background-color:black;
+  cursor:pointer;
+}
+.active{
+  background-color: white;
+  color:green;
+  padding:5px;
+  border-radius: 10px;
+  outline: none;
+}
+li a:hover{
+  color:cyan;
+}
+li button:hover{
+  color:cyan;
+}
+.menubutton{
+    position:fixed;
+    right:3rem;
+    top:1.5rem;
+    cursor:pointer;
+}
+.bar{
+  display:block;
+  height:0.2px;
+  width:1.8rem;
+  border-color:white;
+  border-style:solid;
+  margin-bottom: 3px;
+}
+
+
+.clicked .bar:nth-child(2){
+     opacity: 0;
+}
+.clicked .bar:nth-child(1){
+     transform: translateY(22px) rotate(-45deg);
+}
+.clicked .bar:nth-child(3){
+     transform: translateY(11px) rotate(45deg);
+}
+.display{
+  top:5rem;
+}
+.head{
+  font-family: 'Share Tech Mono', monospace;
+  font-weight: bold;
+  font-style: oblique;
+  font-size: 3rem;
+  position:absolute;
+  left:40rem;
+  top:9.6rem;
+  color:#B20600;
+}
+
+
+.container{
+  height:63vh;
+  width:68vw;
+  background-color: #B2C8DF;
+  border-radius: 10px;
+  border-color: grey;
+  border-style: double;
+  border-width: 10px;
+  position:absolute;
+  top:15rem;
+  left:5rem;
+  display:grid;
+  grid-template-rows: repeat(5,1fr);
+  grid-template-columns: repeat(6,1fr);
+  justify-items:center;
+  align-items: center;
+  grid-gap: 2px 2px;
+  transition: background-color,2s;
+  box-shadow: 0px 0px 20px 4px rgba(0,0,0,0.4);
+  }
+.list{
+  display:block;
+  color:#5800FF;
+  text-decoration: none;
+  font-size: 1.15rem;
+  opacity:1;
+}
+.list:hover{
+  color:#A47E3B;
+}
+.container:hover{
+  opacity: 1;
+  background-color: #A6D1E6;
+}
+.search{
+  position: absolute;
+  top:15rem;
+  right:4rem;
+  justify-content: space-around;
+}
+.searchBar{
+   padding: 10px 0;
+   display: flex;
+   flex-direction: row;
+}
+
+.searchBar input{
+   width: 200px;
+   font-size: 1rem;
+   padding: 3px 10px;
+   background-color: #B667F1;
+   border: 2px solid black;
+   border-radius: 5px 0 0 5px;
+}
+
+.searchBar input::placeholder{
+  color: #533535;
+}
+
+.searchBar button{
+  font-size: 2rem;
+  padding: 3px 3px;
+  border: 0;
+  cursor: pointer;
+  background-color: #FDEBF7;
+  border: 2px solid black;
+  border-left: 0;
+  border-radius: 0 5px 5px 0;
+}
+
+.searchBar button:hover{
+  background-color: #FBCAFF;
+  color: #395B64;
+}
+
+.matchedUsers{
+  width: calc(220px + 2rem);
+  height: 350px;
+  background-image: linear-gradient(to bottom, white,#EFEFEF,#EEEEEE,#92A9BD);
+  position: absolute;
+  border-radius: 5px;
+  overflow-y: visible;
+  border: 2px solid black;
+  display: none;
+  flex-direction: column;
+  overflow-y: scroll;
+  z-index:2;
+}
+
+.showUsers{
+  display: flex;
+}
+
+.searchedUser{
+  display: flex;
+  font-size: 1.2rem;
+  justify-content: left;
+  align-items: center;
+  border-radius: 5px;
+  margin: 0 2px;
+  cursor: pointer;
+  padding-bottom: 10px;
+  transition: all .7s;
+}
+.searchedUser img{
+  height:30px;
+  width:30px;
+}
+.matchedUsers a{
+  text-decoration: none;
+  color: black;
+}
+
+.searchedUser::nth-child(1){
+  margin-top: 10px;
+}
+
+.searchedUser:hover{
+    background-image: linear-gradient(to left,#EEEEEE,#E4EFE7,#CAE4DB);
+    color: #888888;
+}

@@ -1,0 +1,152 @@
+*{
+  margin:0;
+  padding:0;
+}
+body{
+  background-color: #7FB5FF;
+}
+.close {
+  font-size: 3rem;
+  position:absolute;
+  top:3.5rem;
+  left:4.5rem;
+  text-shadow: 5px;
+}
+.close a{
+  text-decoration: none;
+}
+.profile1{
+  background-color: #8946A6;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  position: absolute;
+  top: 15rem;
+  left:4rem;
+  z-index:1;
+}
+
+.profile1 img{
+  width: 250px;
+  height:250px;
+}
+
+button{
+  position:absolute;
+  top:37rem;
+  left:7rem;
+  z-index:1;
+  height:60px;
+  width:150px;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 5px;
+  border-color:#DAEAF1 ;
+  background-color:#F2D1D1;
+  font-family: 'Gentium Book Plus', serif;
+  text-align: center;
+  color:#06283D;
+  font-size:1.6rem;
+  display:inline-block;
+}
+
+button:active{
+  color:#610C63;
+  background-color: #9CB4CC;
+  border-color:#A0E418;
+}
+
+.details1{
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 1.5rem;
+  font-family: 'Fondamento', cursive;
+  color: #C1FFD7;
+  transition:color 2s;
+}
+.details1 p{
+  margin-bottom:0.9rem;
+}
+.details1:hover{
+  color:#001D6E;
+}
+.jhund1 .fav{
+  display: inline-block;
+  width:140px;
+  height:60px;
+  position:absolute;
+  top:16rem;
+  right:30rem;
+  font-size: 2rem;
+  background-color: #CDF0EA;
+  color:#FF06B7;
+  border-color: #4B8673;
+  border-radius: 10px;
+  border-width: thick;
+  border-style: solid;
+  padding: 4px 7px 3px;
+  cursor:pointer;
+  transition:all 2s;
+  font-family: 'The Nautigal', cursive;
+}
+.jhund1 .fav:hover{
+  color:#FF5B00;
+  background-color: #FFC3C3;
+}
+.jhund1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top:17.6rem;
+  left:45rem;
+}
+
+.favoritelist{
+  height:25rem;
+  width:20rem;
+  border-radius:10px;
+  border-color:#610C63;
+  border-style: solid;
+  border-width: 8px;
+  position:absolute;
+  top:15.5rem;
+  left:46rem;
+  background-color: #97C4B8;
+  z-index:4;
+}
+
+.hideFav{
+  display: none;
+}
+.show1{
+display:flex;
+flex-direction: column;
+}
+.favoritelist #mining{
+color:black;
+font-size: 2rem;
+position:absolute;
+top:0.3rem;
+right:1rem;
+}
+.favoritelist p{
+font-size: 2rem;
+padding-left:10px;
+}
+.followsection1{
+  position:absolute;
+  top:12rem;
+  right:18rem;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.followsection1 a{
+  font-size: 2rem;
+  font-weight: bold;
+  margin-right: 10rem;
+  text-decoration: none;
+  color:#231955;
+}

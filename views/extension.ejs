@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>swasthya guru</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital@1&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Petrona&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Uchen&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/extensions.css">
+  </head>
+  <body>
+    <a  class="back" href="/asanas">❌</a>
+    <span class="likes" flag=<%= asana.name %>>🤍</span><span id="number"><%= asana.likes.length %></span>
+
+      <div class="container">
+        <span><%= asana.name %></span>
+        <img src=<%="/images/"+ asana.picture+asana.imgtype %>>
+        <p><%= asana.benefits %></p>
+        <button type="button" name=<%= asana.name %>>Add to favourites</button>
+     </div>
+
+     <script src="/js/extension.js" charset="utf-8"></script>
+  </body>
+
+</html>

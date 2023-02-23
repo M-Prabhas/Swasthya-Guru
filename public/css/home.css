@@ -6,7 +6,7 @@ h1{
    font-family:'Tangerine', cursive;
    color:#C74B50;
    font-size: 5.7rem;
-   position: absolute;
+   position:absolute;
    top:7.3rem;
    left:4rem;
    z-index:1;
@@ -17,6 +17,7 @@ body{
   width: 100vw;
   height:100vh;
   z-index:0;
+  overflow-x:hidden;
 }
 .about{
   z-index:1;
@@ -42,11 +43,61 @@ body{
   border-style:solid;
   z-index:-1;
 }
+.slider{
+  position:absolute;
+  top:18.6rem;
+  right:12rem;
+  width:15rem;
+  overflow: hidden;
+}
+.images{
+  display:flex;
+  width:100%
+}
+.images img{
+  height:250px;
+  width:100%;
+  transition: all 0.15s ease;
+}
+.images input{
+  display:none;
+}
+.dots{
+  display: flex;
+  justify-content: center;
+  margin:5px;
+}
+.dots label{
+  height:13px;
+  width:13px;
+  border-radius: 50%;
+  border:solid #29C7AC 5px;
+  cursor:pointer;
+  transition: all 0.15s ease;
+  margin:5px;
+}
+.dots label:hover{
+  background: #fff;
+}
+
+#img2:checked ~ .m2{
+  margin-left: 0;
+}
+#img3:checked ~ .m3{
+  margin-left: -100%;
+}
+#img4:checked ~ .m4{
+  margin-left: -200%;
+}
+#img5:checked ~ .m5{
+  margin-left: -300%;
+}
+
 .header{
   width:100vw;
   height:5rem;
   background-color: black;
-  position:absolute;
+  position: fixed;
   top:0;
   left:0;
   z-index:2;
@@ -56,17 +107,17 @@ body{
   position:absolute;
   left:0;
   top:-100rem;
-  height:85%;
+  height:95%;
   width:100vw;
   background-color: black;
-  align-items: center;
   z-index:3;
+   overflow: hidden;
 }
 .navbar{
-  position: absolute;
-  top:13rem;
-  left:47rem;
-
+  padding-top: 14rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 li{
   list-style: none;
@@ -76,7 +127,17 @@ li a{
   text-decoration: none;
   color:white;
   font-size: 2rem;
-    transition:color 2s;
+  transition:color 2s;
+}
+li button{
+  text-decoration: none;
+  color:white;
+  font-size: 2rem;
+  transition:color 2s;
+  border-style:black;
+  border-width: 0;
+  background-color:black;
+  cursor:pointer;
 }
 .active{
   background-color: white;
@@ -86,6 +147,9 @@ li a{
   outline: none;
 }
 li a:hover{
+  color:cyan;
+}
+li button:hover{
   color:cyan;
 }
 .menubutton{
@@ -115,4 +179,56 @@ li a:hover{
 }
 .display{
   top:5rem;
+}
+
+@media screen and (max-width: 1305px){
+  .about{
+    top:17rem;
+    left:4rem;
+    right:4rem;
+  }
+  .slider{
+    top:60rem;
+    left:10rem;
+  }
+}
+@media screen and (max-width: 554px){
+  .slider{
+    top:70rem;
+  }
+}
+.reviews{
+  position:absolute;
+  top:43.5em;
+  left:4rem;
+}
+h2{
+  font-size: 2.3rem;
+  font-family: 'Creepster', cursive;
+  color:#711A75;
+}
+.usercomment{
+  font-family: 'Stint Ultra Condensed', cursive;
+  color:#371B58;
+  font-size: 1.4rem;
+  border-radius: 10px;
+  border-color: #270082;
+  border-width: medium;
+  border-style: solid;
+  box-shadow: 5px 10px #888888;
+  background-color: #F806CC;
+  text-align:left;
+  padding-left: 1.3rem;
+  padding-top:1rem;
+  width:50rem;
+  padding-bottom: 18px;
+  height: 4rem;
+}
+.usercommentor{
+  font-family: 'Updock', cursive;
+  color:#270082;
+  position:relative;
+  left:43rem;
+  font-size: 1.4rem;
+  font-stretch: extra-condensed;
 }

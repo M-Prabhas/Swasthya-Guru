@@ -1,5 +1,5 @@
 <%- include("header"); -%>
-<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/css/styles.css">
 <title>swasthya guru</title>
 </head>
 
@@ -7,13 +7,14 @@
 <h1>SwasthyaGuru</h1>
 <span></span>
 
+<p class="message"><%= message %></p>
 
 <form class="w" action="/login" method="post">
-  <input  type="text" name="username" placeholder="Enter UserName">
+  <input  type="text" name="username" placeholder="Enter UserName" required>
   <br>
-  <input type="password" name="password" placeholder="Enter Password">
+  <input type="password" name="password" placeholder="Enter Password" required>
   <br>
-  <a class="home" href="">sign in</a>
+  <button class="home" type="submit">sign in</button>
   <br>
   <p style="display:inline;color:white;font-size:1.3rem">Are you New?,Create account ...</p>
   <br>
@@ -21,7 +22,7 @@
 
 </form>
 
-
+<script src="C:\Users\DELL\Desktop\health app\jas\login.js" charset="utf-8"></script>
 
 
 <%- include("header"); -%>

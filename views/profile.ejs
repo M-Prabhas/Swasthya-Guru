@@ -1,0 +1,122 @@
+<%- include("header"); -%>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+<link rel="stylesheet" href="/css/profile.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fondamento:ital@1&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=The+Nautigal:wght@700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gulzar&display=swap" rel="stylesheet">
+<title>swasthya guru</title>
+</head>
+
+<body>
+
+
+  <div class="header">
+       <div class="menubutton">
+         <span class="bar"></span>
+         <span class="bar"></span>
+         <span class="bar"></span>
+      </div>
+  </div>
+      <div class="menubar">
+        <ul class="navbar">
+          <li><a href="/home">Home</a></li>
+              <li><a href="/asanas">Asanas</a></li>
+              <li><a href="/precautions" >Precautiouns</a></li>
+              <li><a href="/profile" class="active" >Profile</a></li>
+              <form  action="/deleteaccount" method="post">
+                <li><button type="submit">Delete Account</button></li>
+              </form>
+
+        </ul>
+        </div>
+
+
+        <div class="search">
+         <div class="searchBar">
+           <input type="text" placeholder="Search users here..."/>
+           <button type="submit"><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+         </div>
+         <div class="matchedUsers">
+             <a></a>
+         </div>
+       </div>
+
+       <div class="profile">
+      <img src=<%= "/images/" + user.picture + ".jfif" %>>
+    </div>
+
+    <div class="changeAvatar">
+      <span class="span">Change picture</span><button><i class="fa fa-external-link" aria-hidden="true"></i></button>
+     </div>
+
+    <div class="avatars hide">
+   <% for(var i = 1; i <= 10; i++){ %>
+     <div class="image">
+       <img title = <%= i %> src = <%= "/images/" + i + ".jfif" %> />
+     </div>
+   <% } %>
+ </div>
+
+<div class="followsection">
+  <a  href=<%="/"+user.username+"/followers"%>><i class="fa-solid fa-person-arrow-down-to-line"> <h5 style="display:inline;font-family: 'Gulzar', serif"><%= user.followers.length %></h5> </i></a>
+  <a  href=<%="/"+user.username+"/following"%>><i class="fa-solid fa-person-arrow-up-from-line"> <h5 style="display:inline;font-family: 'Gulzar', serif"><%= user.following.length %></h5></i></a>
+</div>
+
+
+
+
+<div class="jhund">
+  <div class="details">
+      <p class="username">UserName : <%= user.username %></p>
+      <p class="email">Email-Id : <%= user.email %></p>
+      <p class="dob">DateOfBirth : <%= user.Date %></p>
+      <p class="favourite">FavouriteAsanas : <%= user.favorite.length %></p>
+      <p class="contributed">Asanas-annexed : </p>
+  </div>
+     <button class="fav" id="nomine" type="button" name="fav">Favourites</button>
+     <br />
+     <br />
+
+
+</div>
+
+<div class="favoritelist hideFav">
+  <p id="mining"><i class="fa-solid fa-rectangle-xmark"></i></p>
+  <br>
+  <br>
+ <% if(user.favorite.length===0){ %>
+     <p>No Asanas</p>
+<%   }else{ %>
+    <% for(var i = 0; i <user.favorite.length; i++){ %>
+            <p num=<%= user.favorite[i] %>><%= user.favorite[i] %></p>
+    <% } %>
+<%   } %>
+
+</div>
+
+
+        <script src="/js/profile.js" charset="utf-8"></script>
+
+<script type="text/javascript">
+   console.log(<%= user.followers.length %> === 0);
+   if(<%= user.followers.length %> === 0){
+     document.querySelector(".followsection a .fa-person-arrow-down-to-line h5").innerHTML="none";
+     console.log(true);
+   }
+   if(<%= user.following.length %> === 0){
+     document.querySelector(".followsection a .fa-person-arrow-up-from-line h5").innerHTML="none";
+     console.log(true);
+   }
+</script>
+
+<%- include("footer"); -%>

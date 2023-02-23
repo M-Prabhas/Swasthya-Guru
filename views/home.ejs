@@ -1,1 +1,77 @@
+<%- include("header"); -%>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=El+Messiri&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Creepster&family=Satisfy&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Stint+Ultra+Condensed&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Updock&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/home.css">
+<title>swasthya guru</title>
+</head>
 
+<body>
+
+
+  <div class="header">
+       <div class="menubutton">
+         <span class="bar"></span>
+         <span class="bar"></span>
+         <span class="bar"></span>
+      </div>
+  </div>
+      <div class="menubar">
+        <ul class="navbar">
+          <li><a href="/home" class="active">Home</a></li>
+              <li><a href="/asanas">Asanas</a></li>
+              <li><a href="/precautions" >Precautiouns</a></li>
+                <li><a href="/profile"  >Profile</a></li>
+              <form  action="/deleteaccount" method="post">
+                <li><button type="submit">Delete Account</button></li>
+              </form>
+
+        </ul>
+        </div>
+
+
+<h1>SwasthyaGuru</h1>
+<span class="markad"></span>
+
+<p class="about">The main Aim of this Website is to create Awareness among the people about the Practice of Yoga and its Usage for healing and curing the various diseases internally as well as externally in our Human Body .This Website also looks forward to retain the inheritance of this vedic Yoga Practice for the Generations To come.<br> <br>Yoga and pranayam are very useful in worldly life to make the physical body and vital body healthy. With a healthy body one is better able to undertake spiritual practice such as service towards the Absolute Truth (satsēvā).<br>
+<br>If yoga and pranayam are complemented with other forms of spiritual practice to purify the mental body and other bodies then a person can achieve rapid spiritual progress in his lifetime. Thus a person can make progress to achieve the purpose of life which is to merge with God </p>
+
+<div class="slider">
+  <div class="images">
+      <input type="radio" name="slide" id="img2">
+        <input type="radio" name="slide" id="img3">
+          <input type="radio" name="slide" id="img4">
+            <input type="radio" name="slide" id="img5">
+      <img src="/images/image2.jpg" class="m2" alt="img2">
+        <img src="/images/image3.jpg" class="m3" alt="img3">
+          <img src="/images/image4.jpg" class="m4" alt="img4">
+            <img src="/images/image5.jpg" class="m5" alt="img5">
+  </div>
+    <div class="dots">
+      <label for="img2"></label>
+      <label for="img3"></label>
+      <label for="img4"></label>
+      <label for="img5"></label>
+    </div>
+</div>
+
+
+
+<script src="/js/home.js" charset="utf-8"></script>
+
+<%- include("footer"); -%>

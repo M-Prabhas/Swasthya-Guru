@@ -1,0 +1,80 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: #3A4750;
+}
+
+.back{
+  font-size: 3rem;
+  text-decoration: none;
+  position: absolute;
+  top:3rem;
+  right:4rem;
+}
+.likes{
+  font-size: 2.5rem;
+  position: absolute;
+  top:4rem;
+  left:6rem;
+}
+#number{
+  font-size: 2rem;
+  color:#F4F4F4;
+  font-weight: bold;
+  position: absolute;
+  top:4.5rem;
+  left:10rem;
+}
+.container{
+  position: fixed;
+  top:6rem;
+  display:grid;
+  height:88vh;
+  width:100vw;
+  grid-template-rows: repeat(4,1fr);
+  grid-template-columns: repeat(1,1fr);
+  justify-items:center;
+  align-items: center;
+}
+.container span{
+font-size:2rem;
+font-weight: bold;
+color:#CCC1FF;
+font-family: 'Noto Serif Display', serif;
+}
+.container img{
+  height:300px;
+  width:300px;
+  border-radius: 10px;
+  border-width: 12px;
+  border-style: solid;
+  border-color: #CFF6CF;
+  z-index: 2;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
+}
+.container p{
+  text-align: center;
+  font-size: 1.4rem;
+  color:#83CBFB;
+  padding: 0 9px;
+  width:80vw;
+  align-self:end;
+  font-family: 'Petrona', serif;
+}
+.container button{
+  text-align: center;
+  font-size: 1.2rem;
+  color:black;
+  font-weight: bold;
+  font-family: 'Uchen', serif;
+  background-color: white;
+  height:2.5rem;
+  width:12rem;
+  border-radius: 10px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #CFF6CF;
+}

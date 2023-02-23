@@ -1,0 +1,87 @@
+<%- include("header"); -%>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+<link rel="stylesheet" href="/css/otherprofile.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arima:wght@500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fondamento:ital@1&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=The+Nautigal:wght@700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@1,700&display=swap" rel="stylesheet">
+<title>swasthya guru</title>
+</head>
+<body>
+<div class="close">
+<a href="/profile">🔙</a>
+</div>
+
+  <div class="profile1">
+  <img src=<%= "/images/" + otheruser.picture + ".jfif" %>>
+  </div>
+
+
+  <%  var j=0; %>
+  <% for(var i=0;i<preuser.following.length;i++){%>
+   <% if(preuser.following[i]===otheruser.email){%>
+         <% console.log("finding"); %>
+      <% j=1; break;%>
+  <% }%>
+  <%}%>
+  <%if(j==1){%>
+    <button type="submit" name="followbutton" value=<%= otheruser.email %>>following</button>
+  <%}else{%>
+  <button type="submit" name="followbutton" value=<%= otheruser.email %>>follow</button>
+  <%}%>
+
+
+<div class="followsection1">
+  <a     href=<%="/"+otheruser.username+"/followers"%>   ><i class="fa-solid fa-person-arrow-down-to-line"> <h5 style="display:inline;font-family: 'Gulzar', serif"><%= otheruser.followers.length %></h5> </i> </a>
+  <a     href=<%="/"+otheruser.username+"/following"%>   ><i class="fa-solid fa-person-arrow-up-from-line"><h5 style="display:inline;font-family: 'Gulzar', serif"><%= otheruser.following.length %></h5></i> </a>
+</div>
+
+<div class="jhund1">
+  <div class="details1">
+      <p class="username">UserName : <%= otheruser.username %></p>
+      <p class="email">Email-Id : <%= otheruser.email %></p>
+      <p class="dob">DateOfBirth : <%= otheruser.Date %></p>
+      <p class="favourite">FavouriteAsanas : <%= otheruser.favorite.length %></p>
+      </div>
+      <button class="fav" id="nomine" type="button" name="fav">Favourites</button>
+</div>
+
+<div class="favoritelist hideFav">
+  <p id="mining"><i class="fa-solid fa-rectangle-xmark"></i></p>
+  <br>
+  <br>
+ <% if(otheruser.favorite.length===0){ %>
+     <p>No Asanas</p>
+<%   }else{ %>
+    <% for(var i = 0; i <otheruser.favorite.length; i++){ %>
+            <p>otheruser.favorite[i]</p>
+    <% } %>
+<%   } %>
+
+</div>
+
+
+<script src="/js/otherprofile.js" charset="utf-8"></script>
+<script type="text/javascript">
+   if(<%= otheruser.followers.length %> === 0){
+     document.querySelector(".followsection1 a .fa-person-arrow-down-to-line h5").innerHTML="none";
+     console.log(true);
+   }
+   if(<%= otheruser.following.length %> === 0){
+     document.querySelector(".followsection1 a .fa-person-arrow-up-from-line h5").innerHTML="none";
+     console.log(true);
+   }
+</script>
+<%- include("footer"); -%>
